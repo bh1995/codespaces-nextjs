@@ -4,15 +4,15 @@
     "cpus": 2
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "npm install && npm run build",
+  "updateContentCommand": "npm install npm run build",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "npm run dev"
+    "server": "npm start"
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "pages/index.js"
+        "src/app/App.js"
       ]
     }
   },
