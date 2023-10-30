@@ -14,7 +14,12 @@
       "openFiles": [
         "src/app/App.js"
       ]
-    }
+	},
+	"vscode": {
+		"extensions": [
+			"esbenp.prettier-vscode"
+		]
+	}
   },
   "portsAttributes": {
     "3000": {

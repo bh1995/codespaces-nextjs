@@ -21,8 +21,15 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/about" element={ <About/> } />  {/* nested route, About: /about */}
     <Route path="/sign-up" element={ <SignUp/> } />  {/* nested route, SignUp: /sign-up */}
     <Route path="/articles" element={ <Articles/> } />  {/* nested route, Articles: /articles */}
-    <Route path="/categories" element={ <Categories/> } />  {/* nested route, Categories: /categories */}
-    <Route path="/profile" element={ <Profile/> } />  {/* nested route, Profile: /profile */}
+    <Route path="/articles/:title" element={ <Article/> } />  {/* dynamic route, article*/}
+    <Route path="/categories" element={ <Categories/> }>
+      <Route path=":name" element={ <Category/> } />
+    </Route>  {/* nested route, Categories: /categories */}
+
+    <Route path="/profile" element={ <Profile/> }>   {/* nested route, Profile: /profile */}
+      <Route path="edit" element={ <EditProfileForm/> } />
+    </Route>
+    <Route path="/authors/:name" element={ <Author/> } />  {/* nested route, Profile: /profile */}
   </Route>
 ));
 
